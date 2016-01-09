@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:gravity="center">
+
+   <ImageView
+       android:layout_width="240dp"
+       android:layout_height="240dp"
+       android:src="@drawable/error"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/fcb_secondary"
+        android:text="Sorry 您访问的结果不存在"
+        android:textSize="@dimen/fs_subhead"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/fcb_hint"
+        android:layout_marginTop="8dp"
+        android:text="您可以通过以下方式继续访问..."
+        android:textSize="13sp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_history">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="4dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/code"/>
+            <com.example.gululu.icreatorsdksampler.customizeview.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                app:mrl_rippleAlpha="0.6"
+                app:mrl_rippleColor="#FFFF8D"
+                app:mrl_rippleDuration="300"
+                app:mrl_rippleFadeDuration="75"
+                app:mrl_rippleInAdapter="true">
+                <TextView
+                    android:id="@+id/tv_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fs_subhead"
+                    android:textColor="@color/fcb_text_icon"/>
+                <!--<TextView
+                    android:id="@+id/tv_history_eng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="text"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fs_body"
+                    android:textColor="@color/fcb_secondary"/>-->
+
+            </com.example.gululu.icreatorsdksampler.customizeview.MaterialRippleLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@color/fcb_divider"/>
+
+
+
+</LinearLayout>

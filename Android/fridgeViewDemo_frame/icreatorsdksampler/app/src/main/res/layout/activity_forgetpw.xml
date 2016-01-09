@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical"
+    tools:context="com.example.gululu.icreatorsdksampler.activity.LoginActivity">
+    <include
+        layout="@layout/include_translate_title"/>
+    <LinearLayout
+        style="@style/match_wrap"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/regist_account"
+            android:layout_marginTop="16dp"
+            android:text="@string/regist_account"/>
+        <EditText
+            style="@style/regist_edt"
+            android:text="@string/regist_account_hint"/>
+        <TextView
+            style="@style/login_divider"/>
+
+        <TextView
+            style="@style/regist_account"
+            android:layout_marginTop="16dp"
+            android:text="@string/regist_verifycode"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <EditText
+                android:id="@+id/edt_regist_verifycode"
+                style="@style/regist_edt"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/regist_verifycode_hint"/>
+            <Button
+                android:id="@+id/btn_regist_sendcode"
+                style="@style/regist_btn_verifycode"
+                android:layout_width="80dp"/>
+        </RelativeLayout>
+
+        <TextView
+            style="@style/login_divider"/>
+
+        <TextView
+            style="@style/regist_account"
+            android:layout_marginTop="16dp"
+            android:text="新密码"/>
+        <EditText
+            style="@style/regist_edt"
+            android:text="@string/regist_setpw_hint"/>
+        <TextView
+            style="@style/login_divider"/>
+
+        <TextView
+            style="@style/regist_account"
+            android:layout_marginTop="16dp"
+            android:text="确认新密码"/>
+        <EditText
+            style="@style/regist_edt"
+            android:text="@string/regist_setpw_hint"/>
+        <TextView
+            style="@style/login_divider"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/login_btn_s"
+            android:gravity="center"
+            android:textColor="@color/fcw_text_icon"
+            android:text="重置密码"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
