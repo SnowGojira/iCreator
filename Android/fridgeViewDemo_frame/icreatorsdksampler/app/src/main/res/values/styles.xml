@@ -105,6 +105,46 @@
         <item name="android:background">@drawable/regist_btn_s</item>
     </style>
 
+    <!--config页面的设置-->
+
+    <style name="config_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/fcw</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="config_ll_item">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@color/fcw</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="config_textview">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textSize">@dimen/fs_subhead</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="config_img">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:src">@drawable/ic_arrow</item>
+    </style>
+
+    <style name="config_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:background">@color/fcb_divider</item>
+        <item name="android:layout_height">2px</item>
+    </style>
+
 
 
 </resources>

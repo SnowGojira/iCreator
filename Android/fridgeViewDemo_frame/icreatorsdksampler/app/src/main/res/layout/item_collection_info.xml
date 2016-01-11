@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.gululu.icreatorsdksampler.customizeview.MaterialRippleLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:id="@+id/material_collection"
+    app:mrl_rippleAlpha="0.6"
+    app:mrl_rippleColor="@color/ripple_color"
+    app:mrl_rippleDuration="350"
+    app:mrl_rippleFadeDuration="100"
+    app:mrl_rippleHover="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/img_icon"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/txt_collect_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/img_icon"
+            android:text="subtitle"
+            android:lines="1" />
+
+        <TextView
+            android:id="@+id/txt_collect_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_collect_name"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:text="title"
+            android:layout_toRightOf="@id/img_icon" />
+
+            <TextView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="88dp"
+                android:layout_height="2px"
+                android:background="@color/fcb_divider"/>
+
+        </RelativeLayout>
+
+</com.example.gululu.icreatorsdksampler.customizeview.MaterialRippleLayout>

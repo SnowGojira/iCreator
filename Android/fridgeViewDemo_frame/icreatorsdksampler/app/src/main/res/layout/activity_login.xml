@@ -18,8 +18,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
             android:src="@drawable/login_head"
             android:layout_gravity="center_horizontal"/>
 

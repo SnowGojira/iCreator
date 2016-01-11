@@ -1,16 +1,18 @@
 package com.example.gululu.icreatorsdksampler.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.gululu.icreatorsdksampler.R;
-import com.example.gululu.icreatorsdksampler.adapter.HistoryAdapter;
+import com.example.gululu.icreatorsdksampler.adapter.iCollectAdapter;
 import com.example.gululu.icreatorsdksampler.database.HistoryDBConfig;
 import com.example.gululu.icreatorsdksampler.database.HistroryDBHelper;
 import com.example.gululu.icreatorsdksampler.PullRefreshModule.PullToRefreshView;
@@ -34,13 +36,13 @@ public class HistoryActivity extends Activity {
     @Bind(R.id.lv_history)
     ListView mListView;
     @Bind(R.id.title_back)
-    ImageButton btn;
+    ImageButton btnBack;
     @Bind(R.id.pull_to_refresh)
     PullToRefreshView mPullToRefreshView;
 
 
     private List mList;
-    private HistoryAdapter mAdapter;
+    private iCollectAdapter mAdapter;
     private StringBuilder strBuild;
 
 
@@ -58,8 +60,10 @@ public class HistoryActivity extends Activity {
         ButterKnife.bind(this);
         overridePendingTransition(R.anim.slide_in_from_right, R.anim.slide_out_to_left);
 
-
-       btn.setOnClickListener(new View.OnClickListener() {
+        /**
+         * 点击返回
+         */
+       btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 hisDB.close();
@@ -67,6 +71,9 @@ public class HistoryActivity extends Activity {
             }
         });
 
+        /**
+         * 下拉刷新
+         */
         mPullToRefreshView.setOnRefreshListener(new PullToRefreshView.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -79,7 +86,6 @@ public class HistoryActivity extends Activity {
                 },2000);
             }
         });
-
 
         initListView();
 
@@ -126,8 +132,23 @@ public class HistoryActivity extends Activity {
     private void initListView() {
         try{initData();}
         catch (Exception e){ Log.i("Haku",e+"");}
-        mAdapter=new HistoryAdapter(HistoryActivity.this,mList,hisDBHelper);
+        mAdapter=new iCollectAdapter(HistoryActivity.this,mList,hisDBHelper);
         mListView.setAdapter(mAdapter);
+
+        /**
+         * 点击跳转
+         */
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                HashMap mMap = (HashMap) mList.get(position);
+                String uid = mMap.get(HistoryDBConfig.dbConfig.COLUMN_NAME_UID).toString();
+                Log.i("Haku", getClass().getName() + " " + position + " " + uid);
+                Intent intent = new Intent(getApplicationContext(), ShowActivity.class);
+                intent.putExtra("UID", uid);
+                startActivity(intent);
+            }
+        });
 
         hisDB.close();
         Log.i("Haku", "HistoryActivity的db已关闭");

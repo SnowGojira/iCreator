@@ -68,12 +68,17 @@
     <!--login页面色值-->
     <color name="btn_green">#389e8e</color>
     <color name="btn_green_p">#277a6b</color>
-    <color name="btn_yellow">#f9c440</color>
+    <color name="btn_yellow">#ebb02b</color>
     <color name="btn_yellow_p">#aa862c</color>
     <color name="btn_regist_p">#4a4c4e</color>
 
     <!--Mine页面-->
     <color name="mine_listbg">#cfcfd2</color>
+    <color name="ripple_color">#ebb02b</color>
 
+    <!--like button-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 
 </resources>

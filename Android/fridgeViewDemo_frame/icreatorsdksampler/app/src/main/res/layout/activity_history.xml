@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/list_bg"
+    android:background="@drawable/login_bg"
     tools:context="com.example.gululu.icreatorsdksampler.activity.HistoryActivity">
     <include layout="@layout/include_title"
         android:id="@+id/title"/>
@@ -18,8 +18,8 @@
         android:id="@+id/lv_history"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/main_bg"
         android:divider="@null"/>
-
     </com.example.gululu.icreatorsdksampler.PullRefreshModule.PullToRefreshView>
 
 

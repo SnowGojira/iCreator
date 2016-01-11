@@ -31,6 +31,7 @@
     <string name="regist_set_pw">设置密码</string>
     <string name="regist_setpw_hint">请输入6-16位字母或数字</string>
     <string name="title_activity_mine">MineActivity</string>
+    <string name="title_activity_config">ConfigActivity</string>
 
 
 

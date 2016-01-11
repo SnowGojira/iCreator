@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -33,14 +34,16 @@ public class ShowActivity extends FragmentActivity {
 
     @Bind(R.id.title_back)
     ImageButton btn_back;
-    @Bind(R.id.tv_title)
-    TextView tv_title;
+   /* @Bind(R.id.tv_title)
+    TextView tv_title;*/
     @Bind(R.id.iv_encode)
     ImageView ivEncode;
     @Bind(R.id.tv_history)
     TextView tvHistory;
     @Bind(R.id.tv_history_eng)
     TextView tvHistoryEng;
+    @Bind(R.id.ll_collection)
+    LinearLayout llCollection;
 
 
     private Intent mIntent;
@@ -94,7 +97,7 @@ public class ShowActivity extends FragmentActivity {
             }
         });
 
-        tv_title.setText("详细页");
+        //tv_title.setText("详细页");
     }
 
     private void LoadGLViewFragment(Context context,String uid){
@@ -112,8 +115,15 @@ public class ShowActivity extends FragmentActivity {
         fm=getSupportFragmentManager();
         ft=fm.beginTransaction();
         fragment404=new NotFoundFragment();
-        ft.replace(R.id.frame_glview,fragment404);
+        ft.replace(R.id.frame_glview, fragment404);
         ft.commit();
+
+        /**
+         * 不显示收藏区域
+         * update 2016-1-11
+         */
+
+        llCollection.setVisibility(View.GONE);
     }
 
     @Override
