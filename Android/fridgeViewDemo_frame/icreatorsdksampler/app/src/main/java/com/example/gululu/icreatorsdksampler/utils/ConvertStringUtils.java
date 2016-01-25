@@ -1,5 +1,12 @@
 package com.example.gululu.icreatorsdksampler.utils;
 
+import android.util.Log;
+
+import com.example.gululu.icreatorsdksampler.bean.UuidBean;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Haku on 2015/12/25.
  * update 2016/01/05
@@ -34,80 +41,134 @@ public class ConvertStringUtils {
     private static String BATHTUB08_UUID="e2b083c894194deba5cd5b737f85f856";
     private static String TABLETYPE004_UUID="eeaadc66b54647b09c6f23981d6ac0a6";
 
+    /*狗狗*/
+    private static String DOG_UUID="6ae2a52465c641e2ab767b264b68a0d3";
+    /*兔兔*/
+    private static String BUNNY_UUID="f7f792d7772645058b9fa170877dd23c";
+    private static String V1_UUID="e979aed3aee1435a856ce758f7df50e6";
+    private static String V2_UUID="07b4d6b0c02b4894a98e16e011743e8f";
+    private static String V5_UUID="2840540376c74be0ae6fd3d001753a18";
+    private static String V8_UUID="fb88e4d7b23453cadb767df00e46ad7";
+
+    private static String V9_UUID="33e160c35e994c05936271fca37d0d51";
+    private static String V10_UUID="3c51742d440b4071bc1d1940265e3cba";
+    private static String V12_UUID="a37d7e3948b84408839e112bb5362125";
+    private static String V17_UUID="087192f60fd3446d938c754379a6cefe";
+    private static String V18_UUID="3d2f040f584c438b88e7a3ccc5d492f2";
+    private static String V19_UUID="0d68e53c30f74ab2a4fb9dfb5ada390a";
+    private static String V20_UUID="7e592c3614c94a8996358ed54694da65";
+    private static String V21_UUID="af9a6ee1298a4d998daf063908bd776b";
+    private static String V22_UUID="6eb37f5c22c04e30a95965c1145325b4";
+    private static String V23_UUID="2810b8d53d7241e6a1410dca53692f0a";
+
+    private static String ROBOTO_UUID="64d587ed251c44069e395289a4714c79";
+    private static String ORANGE_UUID="0b7f1347f2564ac98db065a00fdc5c0a";
+    private static String EVIL_UUID="c2da991aa299486c90c5c9434759074a";
+    private static String BREAD_UUID="5debe1440a0a4986b1f5f5e35150191e";
+    private static String BANANA_UUID="baba30582638401fa01ebc5aff58c15e";
+    private static String DIAOSU13_UUID="ded84770652b4f589e9b9c1cf942c990";
+    private static String DIAOSU14_UUID="90c8727daee742ce923412b38f625276";
 
 
+
+
+    final static String[] Uuids=new String[]{
+            SHADER_UUID,V5_UUID,DANDELION_UUID,PLANTAIN_UUID,SUMSUNGTV_UUID,ELECTROX_UUID,
+            TABLETYPE002_UUID,CLOSESTOOLTYPE007_UUID,MIDEAWASHING01_UUID,TABLETYPE003_UUID,
+            WATERFOURTAIN_UUID,SUMSUNGWASHING01_UUID,CLOSESTOOL02_UUID,TABLETYPE005_UUID,
+            TABLETYPE006_UUID,SONYTV001_UUID,BATHTUB001_UUID,TABLETYPE001_UUID,V9_UUID,
+            V10_UUID,V12_UUID,V17_UUID,V18_UUID,V19_UUID,V20_UUID,V21_UUID,V22_UUID,V23_UUID,
+            TABLETYPE007_UUID,BATHTUB009_UUID,WASHINGMACHINE_UUID,KITCHEN01_UUID,KITCHEN03_UUID,
+            KITCHEN05_UUID,KITCHEN04_UUID,KITCHEN06_UUID,KITCHEN07_UUID,BATHTUB08_UUID,
+            TABLETYPE004_UUID,DOG_UUID,BUNNY_UUID,V1_UUID,V2_UUID,ROBOTO_UUID,ORANGE_UUID,EVIL_UUID,
+            BREAD_UUID,BANANA_UUID,DIAOSU13_UUID,DIAOSU14_UUID
+
+    };
+
+
+
+
+    private static Map storeMap(){
+        Map<String,UuidBean> mMap=new HashMap<>();
+
+        UuidBean[] Beans=new UuidBean[]{
+          new UuidBean("shader","shader"),
+          new UuidBean("虎皮草","Tiger Grass"),
+                new UuidBean("蒲公英","Dandelion Flower"),
+                new UuidBean("车前草","Plantain Grass"),
+                new UuidBean("电视机","Sumsung Television"),
+                new UuidBean("冰箱","Elextron refrigerator"),
+                new UuidBean("餐桌002","Table type-002"),
+                new UuidBean("马桶007","close stool type-007"),
+                new UuidBean("美的洗衣机01","Midea Washing Machine01"),
+                new UuidBean("餐桌003","Table type-003"),
+                new UuidBean("饮水机","Water fountains"),
+                new UuidBean("三星洗衣机01","SumSung washing machine-01"),
+                new UuidBean("马桶02","Close stool-02"),
+                new UuidBean("餐桌005","Table type-005"),
+                new UuidBean("餐桌006","Table type-006"),
+                new UuidBean("索尼电视机01","Sony television-001"),
+                new UuidBean("浴缸001","Bathtub-001"),
+                new UuidBean("餐桌001","Table type-001"),
+                /**/
+                new UuidBean("竹笋","Banboo"),
+                new UuidBean("月季","Banboo"),
+                new UuidBean("虎尾兰","Banboo"),
+                new UuidBean("虎耳草","Banboo"),
+                new UuidBean("发财树","Banboo"),
+                new UuidBean("龙舌兰","Banboo"),
+                new UuidBean("万年青","Banboo"),
+                new UuidBean("梅花","Banboo"),
+                new UuidBean("水仙","Banboo"),
+                new UuidBean("紫罗兰","Banboo"),
+                /**/
+                new UuidBean("餐桌007","Table type-007"),
+                new UuidBean("浴缸009","Bathtub-009"),
+                new UuidBean("洗衣机","washing machine"),
+                new UuidBean("厨房001","kitchen-001"),
+                new UuidBean("厨房003","kitchen-003"),
+                new UuidBean("厨房005",""),
+                new UuidBean("厨房004",""),
+                new UuidBean("厨房006",""),
+                new UuidBean("厨房007",""),
+                new UuidBean("浴缸008",""),
+                new UuidBean("餐桌004",""),
+                new UuidBean("狗狗",""),
+                new UuidBean("兔兔",""),
+                new UuidBean("棕榈",""),
+                new UuidBean("芦荟",""),
+
+                new UuidBean("机器人",""),
+                new UuidBean("橘子",""),
+                new UuidBean("小恶魔",""),
+                new UuidBean("面包",""),
+                new UuidBean("香蕉",""),
+                new UuidBean("埃及雕像",""),
+                new UuidBean("14",""),
+
+        };
+
+
+        for (int i=0;i<Beans.length;i++){
+            mMap.put(Uuids[i],Beans[i]);
+
+            Log.i("Haku",Beans.length+" "+Uuids.length);
+        }
+
+        return mMap;
+    }
 
     /**
      * 将uuid转化成文件名
      */
     public static String convertToName(String uid){
-        if (uid.equals(SHADER_UUID)){
-            return "shader";
-        }
-        else if (uid.equals(DANDELION_UUID)){
-            return "蒲公英";
-        }
-        else if(uid.equals(PLANTAIN_UUID)){
-            return "车前草";
-        }
-        else if(uid.equals(SUMSUNGTV_UUID)){
-            return "电视机";
-        }
-        else if(uid.equals(ELECTROX_UUID)){
-            return "冰箱";
-        }
-        else if(uid.equals(TABLETYPE002_UUID)){
-            return "餐桌002";
-        }
-        else if(uid.equals(CLOSESTOOLTYPE007_UUID)){
-            return "马桶007";
-        }
-        else if(uid.equals(MIDEAWASHING01_UUID)){
-            return "美的洗衣机01";
-        }
-        else if(uid.equals(TABLETYPE003_UUID)){
-            return "餐桌003";
-        } else if(uid.equals(WATERFOURTAIN_UUID)){
-            return "饮水机";
-        }else if(uid.equals(SUMSUNGWASHING01_UUID)){
-            return "三星洗衣机01";
-        }else if(uid.equals(CLOSESTOOL02_UUID)){
-            return "马桶02";
-        }else if(uid.equals(TABLETYPE005_UUID)){
-            return "餐桌005";
-        }else if(uid.equals(TABLETYPE006_UUID)){
-            return "餐桌006";
-        }else if(uid.equals(SONYTV001_UUID)){
-            return "索尼电视机01";
-        }else if(uid.equals(BATHTUB001_UUID)){
-            return "浴缸001";
-        }else if(uid.equals(TABLETYPE001_UUID)){
-            return "餐桌001";
-        }else if(uid.equals(TABLETYPE007_UUID)){
-            return "餐桌007";
-        }else if(uid.equals(BATHTUB009_UUID)){
-            return "浴缸009";
-        }else if(uid.equals(WASHINGMACHINE_UUID)){
-            return "洗衣机";
-        }else if(uid.equals(KITCHEN01_UUID)){
-            return "厨房001";
-        }else if(uid.equals(KITCHEN03_UUID)){
-            return "厨房003";
-        }else if(uid.equals(KITCHEN05_UUID)){
-            return "厨房005";
-        }else if(uid.equals(KITCHEN04_UUID)){
-            return "厨房004";
-        }else if(uid.equals(KITCHEN06_UUID)){
-            return "厨房006";
-        }else if(uid.equals(KITCHEN07_UUID)){
-            return "厨房007";
-        }else if(uid.equals(BATHTUB08_UUID)){
-            return "浴缸008";
-        }else if(uid.equals(TABLETYPE004_UUID)){
-            return "餐桌004";
+        UuidBean bean= (UuidBean) storeMap().get(uid);
+        if (bean!=null){
+            return bean.getNameCN();
         }
 
         return "测试号";
+
     }
 
     /**
@@ -115,76 +176,11 @@ public class ConvertStringUtils {
      */
 
     public static boolean isUuid(String uid){
-
-        if (uid.equals(SHADER_UUID)){
+        UuidBean bean= (UuidBean) storeMap().get(uid);
+        if (bean!=null){
             return true;
         }
-        else if (uid.equals(DANDELION_UUID)){
-            return true;
-        }
-        else if(uid.equals(PLANTAIN_UUID)){
-            return true;
-        }
-        else if(uid.equals(SUMSUNGTV_UUID)){
-            return true;
-        }
-        else if(uid.equals(ELECTROX_UUID)){
-            return true;
-        }
-        else if(uid.equals(TABLETYPE002_UUID)){
-            return true;
-        }
-        else if(uid.equals(CLOSESTOOLTYPE007_UUID)){
-            return true;
-        }
-        else if(uid.equals(MIDEAWASHING01_UUID)){
-            return true;
-        }
-        else if(uid.equals(TABLETYPE003_UUID)){
-            return true;
-        } else if(uid.equals(WATERFOURTAIN_UUID)){
-            return true;
-        }else if(uid.equals(SUMSUNGWASHING01_UUID)){
-            return true;
-        }else if(uid.equals(CLOSESTOOL02_UUID)){
-            return true;
-        }else if(uid.equals(TABLETYPE005_UUID)){
-            return true;
-        }else if(uid.equals(TABLETYPE006_UUID)){
-            return true;
-        }else if(uid.equals(SONYTV001_UUID)){
-
-            return true;
-        }else if(uid.equals(BATHTUB001_UUID)){
-            return true;
-        }else if(uid.equals(TABLETYPE001_UUID)){
-            return true;
-        }else if(uid.equals(TABLETYPE007_UUID)){
-            return true;
-        }else if(uid.equals(BATHTUB009_UUID)){
-            return true;
-        }else if(uid.equals(WASHINGMACHINE_UUID)){
-            return true;
-        }else if(uid.equals(KITCHEN01_UUID)){
-            return true;
-        }else if(uid.equals(KITCHEN03_UUID)){
-            return true;
-        }else if(uid.equals(KITCHEN05_UUID)){
-            return true;
-        }else if(uid.equals(KITCHEN04_UUID)){
-            return true;
-        }else if(uid.equals(KITCHEN06_UUID)){
-            return true;
-        }else if(uid.equals(KITCHEN07_UUID)){
-            return true;
-        }else if(uid.equals(BATHTUB08_UUID)){
-            return true;
-        }else if(uid.equals(TABLETYPE004_UUID)){
-            return true;
-        }
-
         return false;
-
     }
 
     /**
@@ -192,77 +188,11 @@ public class ConvertStringUtils {
      * 之后有可能删掉*/
 
     public static String translateName(String uid){
-        if(isUuid(uid)){
-            if (uid.equals(SHADER_UUID)){
-                return "Test Shader(dev)";
-            }
-            else if (uid.equals(DANDELION_UUID)){
-                return "Dandelion Flower";
-            }
-            else if(uid.equals(PLANTAIN_UUID)){
-                return "Plantain Grass";
-            }
-            else if(uid.equals(SUMSUNGTV_UUID)){
-                return "Sumsung Television";
-            }
-            else if(uid.equals(ELECTROX_UUID)){
-                return "Elextron refrigerator";
-            }
-            else if(uid.equals(TABLETYPE002_UUID)){
-                return "Table type-002";
-            }
-            else if(uid.equals(CLOSESTOOLTYPE007_UUID)){
-                return "close stool type-007";
-            }
-            else if(uid.equals(MIDEAWASHING01_UUID)){
-                return "Midea Washing Machine01";
-            }
-            else if(uid.equals(TABLETYPE003_UUID)){
-                return "Table type-003";
-            } else if(uid.equals(WATERFOURTAIN_UUID)){
-                return "Water fountains";
-            }else if(uid.equals(SUMSUNGWASHING01_UUID)){
-                return "SumSung washing machine-01";
-            }else if(uid.equals(CLOSESTOOL02_UUID)){
-                return "Close stool-02";
-            }else if(uid.equals(TABLETYPE005_UUID)){
-                return "Table type-005";
-            }else if(uid.equals(TABLETYPE006_UUID)){
-                return "Table type-006";
-            }else if(uid.equals(SONYTV001_UUID)){
-                return "Sony television-001";
-            }else if(uid.equals(BATHTUB001_UUID)){
-                return "Bathtub-001";
-            }else if(uid.equals(TABLETYPE001_UUID)){
-                return "Table type-001";
-            }else if(uid.equals(TABLETYPE007_UUID)){
-                return "Table type-007";
-            }else if(uid.equals(BATHTUB009_UUID)){
-                return "Bathtub-009";
-            }else if(uid.equals(WASHINGMACHINE_UUID)){
-                return "washing machine";
-            }else if(uid.equals(KITCHEN01_UUID)){
-                return "kitchen-001";
-            }else if(uid.equals(KITCHEN03_UUID)){
-                return "kitchen-003";
-            }else if(uid.equals(KITCHEN05_UUID)){
-                return "kitchen-005";
-            }else if(uid.equals(KITCHEN04_UUID)){
-                return "kitchen-004";
-            }
-            else if(uid.equals(KITCHEN06_UUID)){
-                return "kitchen-006";
-            }else if(uid.equals(KITCHEN07_UUID)){
-                return "kitchen-007";
-            }else if(uid.equals(BATHTUB08_UUID)){
-                return "Bathtub-008";
-            }else if(uid.equals(TABLETYPE004_UUID)){
-                return "Table type-004";
-            }
+        UuidBean bean= (UuidBean) storeMap().get(uid);
+        if (bean!=null){
+            return bean.getNameENG();
         }
-
         return uid;
-
     }
 
 }

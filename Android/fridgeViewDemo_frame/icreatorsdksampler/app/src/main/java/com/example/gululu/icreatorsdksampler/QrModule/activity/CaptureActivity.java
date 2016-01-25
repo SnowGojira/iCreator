@@ -10,12 +10,14 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +27,7 @@ import com.example.gululu.icreatorsdksampler.QrModule.camera.CameraManager;
 import com.example.gululu.icreatorsdksampler.QrModule.decoding.CaptureActivityHandler;
 import com.example.gululu.icreatorsdksampler.QrModule.decoding.InactivityTimer;
 import com.example.gululu.icreatorsdksampler.QrModule.view.ViewfinderView;
+import com.example.gululu.icreatorsdksampler.activity.QRresultActivity;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 
@@ -148,11 +151,18 @@ public class CaptureActivity extends Activity implements Callback {
 			Toast.makeText(CaptureActivity.this, "Scan failed!", Toast.LENGTH_SHORT).show();
 		}else {
 //			System.out.println("Result:"+resultString);
-			Intent resultIntent = new Intent();
+
+			Intent resultIntent= new Intent(CaptureActivity.this, QRresultActivity.class);
 			Bundle bundle = new Bundle();
 			bundle.putString("result", resultString);
 			resultIntent.putExtras(bundle);
-			this.setResult(RESULT_OK, resultIntent);
+			Log.i("Haku", getLocalClassName() + " " + resultString);
+			startActivity(resultIntent);
+			/*Intent resultIntent = new Intent();
+			Bundle bundle = new Bundle();
+			bundle.putString("result", resultString);
+			resultIntent.putExtras(bundle);
+			this.setResult(RESULT_OK, resultIntent);*/
 		}
 		CaptureActivity.this.finish();
 	}
@@ -210,7 +220,7 @@ public class CaptureActivity extends Activity implements Callback {
 		viewfinderView.drawViewfinder();
 
 	}
-
+   /*响音*/
 	private void initBeepSound() {
 		if (playBeep && mediaPlayer == null) {
 			// The volume on STREAM_SYSTEM is not adjustable, and users found it
@@ -236,7 +246,7 @@ public class CaptureActivity extends Activity implements Callback {
 	}
 
 	private static final long VIBRATE_DURATION = 200L;
-
+	/*响音和震动的控制*/
 	private void playBeepSoundAndVibrate() {
 		if (playBeep && mediaPlayer != null) {
 			mediaPlayer.start();

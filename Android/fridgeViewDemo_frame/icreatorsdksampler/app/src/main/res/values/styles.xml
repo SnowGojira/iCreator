@@ -11,6 +11,12 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+    <!--title的theme设置-->
+    <style name="TranslucentActionBar" parent="android:Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@null</item>
+    </style>
+
+
     <style name="divider_account">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>
@@ -101,8 +107,9 @@
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_height">32dp</item>
         <item name="android:textColor">@color/fcw_secondary</item>
-        <item name="android:textSize">@dimen/fs_body</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:background">@drawable/regist_btn_s</item>
+        <item name="android:text">验证码</item>
     </style>
 
     <!--config页面的设置-->
@@ -110,7 +117,7 @@
     <style name="config_linear">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@color/fcw</item>
+        <item name="android:background">@drawable/ll_config_action</item>
         <item name="android:orientation">vertical</item>
     </style>
 
@@ -118,7 +125,7 @@
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48dp</item>
-        <item name="android:background">@color/fcw</item>
+        <item name="android:background">@drawable/btn_config_action</item>
         <item name="android:gravity">center_vertical</item>
     </style>
 
@@ -143,6 +150,36 @@
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:background">@color/fcb_divider</item>
         <item name="android:layout_height">2px</item>
+    </style>
+    <!--fab的style-->
+    <style name="MenuButtonsSmall">
+        <item name="fab_size">mini</item>
+        <item name="fab_colorNormal">#191919</item>
+        <item name="fab_colorPressed">#919191</item>
+        <item name="fab_colorRipple">#919191</item>
+    </style>
+
+    <style name="MenuButtonsSmall_b">
+        <item name="fab_size">mini</item>
+        <item name="fab_colorNormal">#2068b2</item>
+        <item name="fab_colorPressed">#2d5883</item>
+        <item name="fab_colorRipple">#919191</item>
+    </style>
+
+    <style name="MenuButtonsSmall_gr">
+        <item name="fab_size">mini</item>
+        <item name="fab_colorNormal">#393430</item>
+        <item name="fab_colorPressed">#070707</item>
+        <item name="fab_colorRipple">#919191</item>
+    </style>
+
+
+   <!--fab的样式-->
+    <style name="fab_style">
+        <!--fab颜色-->
+        <item name="fab_colorNormal">#ebb02b</item>
+        <item name="fab_colorPressed">#aa862c</item>
+        <item name="fab_colorRipple">#D99200</item>
     </style>
 
 

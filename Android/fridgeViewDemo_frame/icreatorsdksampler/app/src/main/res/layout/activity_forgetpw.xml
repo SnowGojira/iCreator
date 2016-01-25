@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context="com.example.gululu.icreatorsdksampler.activity.LoginActivity">
     <include
-        layout="@layout/include_translate_title"/>
+        layout="@layout/include_title"/>
     <LinearLayout
         style="@style/match_wrap"
         android:layout_marginLeft="32dp"

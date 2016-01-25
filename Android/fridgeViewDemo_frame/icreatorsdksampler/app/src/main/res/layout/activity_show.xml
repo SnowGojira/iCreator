@@ -15,10 +15,11 @@
        android:layout_below="@id/title"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:background="@color/main_bg"
+       android:background="@color/main_bg1"
        android:padding="24dp"
        android:orientation="vertical">
        <LinearLayout
+           android:id="@+id/ll_QR_title"
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
@@ -76,6 +77,7 @@
            android:id="@+id/ll_collection"
            android:background="@color/fcw_text_icon">
            <com.example.gululu.icreatorsdksampler.customizeview.like.LikeButton
+               android:id="@+id/like_button"
                android:layout_width="30dp"
                android:layout_height="30dp"
                android:gravity="center"

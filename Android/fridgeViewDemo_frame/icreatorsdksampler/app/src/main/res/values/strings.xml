@@ -27,11 +27,13 @@
     <string name="regist_account">账号</string>
     <string name="regist_account_hint">请输入需要注册的手机号</string>
     <string name="regist_verifycode">验证码</string>
-    <string name="regist_verifycode_hint">请输入6位数验证码</string>
+    <string name="regist_verifycode_hint">请输入4位数验证码</string>
     <string name="regist_set_pw">设置密码</string>
     <string name="regist_setpw_hint">请输入6-16位字母或数字</string>
     <string name="title_activity_mine">MineActivity</string>
     <string name="title_activity_config">ConfigActivity</string>
+    <string name="verify_code_send">验证码</string>
+    <string name="title_activity_feed_back">FeedBackActivity</string>
 
 
 

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context="com.example.gululu.icreatorsdksampler.activity.LoginActivity">
     <include
-        layout="@layout/include_translate_title"/>
+        layout="@layout/include_title"/>
     <LinearLayout
         style="@style/match_wrap"
         android:layout_marginLeft="32dp"
@@ -20,8 +20,9 @@
             android:layout_marginTop="16dp"
             android:text="@string/regist_account"/>
         <EditText
+            android:id="@+id/edt_regist_mobile"
             style="@style/regist_edt"
-            android:text="@string/regist_account_hint"/>
+            android:hint="@string/regist_account_hint"/>
         <TextView
             style="@style/login_divider"/>
 
@@ -38,7 +39,7 @@
                 style="@style/regist_edt"
                 android:layout_width="wrap_content"
                 android:gravity="center_vertical"
-                android:text="@string/regist_verifycode_hint"/>
+                android:hint="@string/regist_verifycode_hint"/>
             <Button
                 android:id="@+id/btn_regist_sendcode"
                 style="@style/regist_btn_verifycode"
@@ -53,12 +54,14 @@
             android:layout_marginTop="16dp"
             android:text="@string/regist_set_pw"/>
         <EditText
+            android:id="@+id/edt_regist_pw"
             style="@style/regist_edt"
-            android:text="@string/regist_setpw_hint"/>
+            android:hint="@string/regist_setpw_hint"/>
         <TextView
             style="@style/login_divider"/>
 
         <Button
+            android:id="@+id/btn_regist_submit"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="32dp"

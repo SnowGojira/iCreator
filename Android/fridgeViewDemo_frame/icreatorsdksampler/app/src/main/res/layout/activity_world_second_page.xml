@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical"
+    tools:context="com.example.gululu.icreatorsdksampler.activity.WorldSecondPage">
+    <include layout="@layout/include_show_title"/>
+    <com.example.gululu.icreatorsdksampler.PullRefreshModule.PullToRefreshView
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_below="@id/title"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_world_model"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"/>
+    </com.example.gululu.icreatorsdksampler.PullRefreshModule.PullToRefreshView>
+</LinearLayout>

@@ -7,12 +7,18 @@ import android.content.pm.LabeledIntent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.PixelFormat;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +46,20 @@ public class AppUtils {
 
     public static void showToast(int stringResId, Context context) {
         showToast(context.getResources().getString(stringResId), context);
+    }
+
+
+    public static int dpToPx(Context context, float dp) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return Math.round(dp * scale);
+    }
+
+    public static boolean hasJellyBean() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
+    }
+
+    public static boolean hasLollipop() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
     }
 
 
@@ -129,5 +149,34 @@ public class AppUtils {
 
         return builder.build().toString();
     }*/
+   public static byte[] drawable2Bytes(Drawable drawable) {
 
+
+       if (drawable == null) {
+           return null;
+       }
+       Bitmap bitmap = drawableToBitmap(drawable);
+
+
+       ByteArrayOutputStream baos = new ByteArrayOutputStream();
+       bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+       return baos.toByteArray();
+   }
+
+    public static Bitmap drawableToBitmap(Drawable drawable) {
+
+
+        Bitmap bitmap = Bitmap
+                .createBitmap(
+                        drawable.getIntrinsicWidth(),
+                        drawable.getIntrinsicHeight(),
+                        drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888
+                                : Bitmap.Config.RGB_565);
+        Canvas canvas = new Canvas(bitmap);
+        // canvas.setBitmap(bitmap);
+        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(),
+                drawable.getIntrinsicHeight());
+        drawable.draw(canvas);
+        return bitmap;
+    }
 }

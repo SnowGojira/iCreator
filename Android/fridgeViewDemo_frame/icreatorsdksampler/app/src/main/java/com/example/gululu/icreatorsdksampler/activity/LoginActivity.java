@@ -62,7 +62,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         switch (v.getId()){
 
             case R.id.btn_login:
-                mIntent = new Intent(LoginActivity.this, ConfigActivity.class);
+                mIntent = new Intent(LoginActivity.this, ChannelActivity.class);
+                //mIntent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(mIntent);
                 break;
             case R.id.btn_register:
@@ -70,7 +71,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 startActivity(mIntent);
                 break;
             case R.id.tv_login_glance:
-                mIntent = new Intent(LoginActivity.this, MainActivity.class);
+                mIntent = new Intent(LoginActivity.this, MineActivity.class);
                 startActivity(mIntent);
                 break;
             case R.id.tv_login_forget:

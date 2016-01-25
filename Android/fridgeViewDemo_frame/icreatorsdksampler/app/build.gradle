@@ -41,4 +41,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.1'
     compile files('libs/butterknife-7.0.1.jar')
     compile 'com.nineoldandroids:library:2.4.0'
+    compile files('libs/gson-2.5.jar')
+    compile files('libs/Volley.jar')
+    compile files('libs/fastjson-1.2.7.jar')
 }

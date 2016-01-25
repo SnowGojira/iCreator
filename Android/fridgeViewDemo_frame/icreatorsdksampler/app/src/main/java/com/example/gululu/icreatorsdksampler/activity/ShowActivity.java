@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -32,7 +34,7 @@ public class ShowActivity extends FragmentActivity {
     private ShowViewFragment fragment;
     private NotFoundFragment fragment404;
 
-    @Bind(R.id.title_back)
+    @Bind(R.id.title_back_show)
     ImageButton btn_back;
    /* @Bind(R.id.tv_title)
     TextView tv_title;*/
@@ -78,13 +80,7 @@ public class ShowActivity extends FragmentActivity {
             }
         }
 
-        ImageButton btn= (ImageButton) findViewById(R.id.title_back);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+
 
 
     }
@@ -96,8 +92,12 @@ public class ShowActivity extends FragmentActivity {
                 finish();
             }
         });
+        /**
+         * 不显示收藏区域
+         * update 2016-1-11
+         */
+        llCollection.setVisibility(View.GONE);
 
-        //tv_title.setText("详细页");
     }
 
     private void LoadGLViewFragment(Context context,String uid){
@@ -118,12 +118,7 @@ public class ShowActivity extends FragmentActivity {
         ft.replace(R.id.frame_glview, fragment404);
         ft.commit();
 
-        /**
-         * 不显示收藏区域
-         * update 2016-1-11
-         */
 
-        llCollection.setVisibility(View.GONE);
     }
 
     @Override

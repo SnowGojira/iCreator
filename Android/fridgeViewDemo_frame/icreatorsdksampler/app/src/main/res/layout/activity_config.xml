@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/main_bg"
+        android:background="@color/main_bg1"
         android:orientation="vertical">
     <LinearLayout
         style="@style/config_linear"
@@ -31,6 +31,7 @@
            style="@style/config_divider"/>
 
         <LinearLayout
+            android:id="@+id/ll_config_feedback"
             style="@style/config_ll_item">
             <TextView
                 android:id="@+id/txt_config_feed"
@@ -59,6 +60,7 @@
             style="@style/config_divider"/>
 
         <LinearLayout
+            android:id="@+id/ll_config_contract"
             style="@style/config_ll_item">
             <TextView
                 style="@style/config_textview"

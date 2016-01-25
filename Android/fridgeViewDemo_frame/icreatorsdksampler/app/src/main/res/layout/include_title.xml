@@ -5,18 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="56dp"
     android:gravity="center_vertical"
-    tools:context="com.example.gululu.icreatorsdksampler.activity.HistoryActivity">
+    tools:context="com.example.gululu.icreatorsdksampler.activity.HistoryActivity"
+    android:orientation="horizontal">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/title_back"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_feed_action"/>
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/arrow"
+            android:layout_gravity="center_vertical"/>
+    </FrameLayout>
 
-    <ImageButton
-        android:id="@+id/title_back"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginLeft="16dp"
-        android:background="@drawable/arrow"/>
     <ImageView
-        android:layout_width="2dp"
-        android:layout_height="32dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="1dp"
+        android:layout_height="24dp"
         android:src="@drawable/line"/>
     <TextView
         android:layout_width="wrap_content"
@@ -25,6 +35,6 @@
         android:layout_marginLeft="16dp"
         android:textColor="@color/text_white"
         android:text="历史记录"
-        android:textSize="@dimen/fs_title"/>
+        android:textSize="@dimen/fs_subhead"/>
 
 </LinearLayout>

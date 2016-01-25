@@ -61,7 +61,9 @@
     <color name="fcbs_hint">#222425</color>
     <color name="fcbs_divider">#2b2d2f</color>
     <!--背景颜色-->
-    <color name="main_bg">#d8d8db</color>
+    <color name="main_bg1">#d2d2d2</color>
+    <color name="main_bg2">#f0f4f3</color>
+    <color name="main_bg">#fafafa</color>
     <color name="title_bg">#4f4e59</color>
     <color name="list_bg">#fafafa</color>
 
@@ -80,5 +82,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--change user info的页面颜色-->
+    <color name="changeUserinfo_bg">#191919</color>
+    <color name="changeUserinfo_content">#e2e2e2</color>
+
+
+
 
 </resources>
