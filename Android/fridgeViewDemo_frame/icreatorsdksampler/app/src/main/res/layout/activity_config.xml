@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical"
+    tools:context="com.example.gululu.icreatorsdksampler.activity.ConfigActivity">
+
+    <include layout="@layout/include_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg1"
+        android:orientation="vertical">
+    <LinearLayout
+        style="@style/config_linear"
+        android:layout_marginTop="16dp">
+        <LinearLayout
+            android:id="@+id/ll_config_clear"
+            style="@style/config_ll_item">
+            <TextView
+                style="@style/config_textview"
+                android:text="清除缓存"/>
+            <ImageView
+                style="@style/config_img"/>
+        </LinearLayout>
+        <TextView
+           style="@style/config_divider"/>
+
+        <LinearLayout
+            android:id="@+id/ll_config_feedback"
+            style="@style/config_ll_item">
+            <TextView
+                android:id="@+id/txt_config_feed"
+                style="@style/config_textview"
+                android:text="意见反馈" />
+            <ImageView
+                style="@style/config_img"/>
+        </LinearLayout>
+        <TextView
+            style="@style/config_divider"/>
+
+        <LinearLayout
+            style="@style/config_ll_item">
+            <TextView
+                style="@style/config_textview"
+                android:text="版本"/>
+            <TextView
+                android:id="@+id/txt_config_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0.1"
+                android:textColor="@color/fcb_hint"
+                android:layout_marginRight="16dp"/>
+        </LinearLayout>
+        <TextView
+            style="@style/config_divider"/>
+
+        <LinearLayout
+            android:id="@+id/ll_config_contract"
+            style="@style/config_ll_item">
+            <TextView
+                style="@style/config_textview"
+                android:text="联系我们"/>
+            <TextView
+                android:id="@+id/txt_config_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="028-86040860"
+                android:textColor="@color/fcb_hint"
+                android:layout_marginRight="16dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        <Button
+            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:id="@+id/btn_loginout"
+            android:layout_marginTop="56dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="72dp"
+            android:background="@drawable/login_btn_s"
+            android:textColor="@color/fcw_text_icon"
+            android:text="退出登录"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

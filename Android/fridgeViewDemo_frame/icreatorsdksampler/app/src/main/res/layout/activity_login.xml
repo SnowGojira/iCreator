@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_bg"
+    tools:context="com.example.gululu.icreatorsdksampler.activity.LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+    <LinearLayout
+        style="@style/login_linear"
+        android:layout_weight="7"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@drawable/login_head"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/login_icon"
+                android:src="@drawable/login_user"/>
+            <TextView
+                style="@style/category_account"
+                android:layout_marginLeft="8dp"
+                android:text="@string/login_account"/>
+            <EditText
+                android:id="@+id/edt_login_phone"
+                style="@style/login_edt"
+                android:hint="@string/login_account_hint"
+                android:maxLength="11"
+                android:inputType="number"/>
+
+        </LinearLayout>
+        <TextView
+            style="@style/login_divider"/>
+        <LinearLayout
+            style="@style/match_wrap"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/login_icon"
+                android:src="@drawable/login_password"/>
+            <TextView
+                style="@style/category_account"
+                android:layout_marginLeft="8dp"
+                android:text="@string/login_password"/>
+            <EditText
+                android:id="@+id/edt_login_password"
+                style="@style/login_edt"
+                android:hint="@string/login_password_hint"/>
+
+        </LinearLayout>
+        <TextView
+            style="@style/login_divider"/>
+        <LinearLayout
+            style="@style/wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/tv_login_glance"
+                style="@style/wrap_content"
+                android:text="@string/login_glance"
+                android:textSize="@dimen/fs_body"
+                android:textColor="@color/fcw_secondary"/>
+            <TextView
+                android:id="@+id/tv_login_forget"
+                style="@style/wrap_content"
+                android:text="@string/login_forget"
+                android:layout_marginLeft="16dp"
+                android:textSize="@dimen/fs_body"
+                android:textColor="#868787"/>
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    <LinearLayout
+       style="@style/login_linear"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/login_button"
+            android:background="@drawable/regist_btn_s"
+            android:text="@string/login_regist"/>
+        <TextView
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/login_button"
+            android:background="@drawable/login_btn_s"
+            android:text="@string/login_login"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

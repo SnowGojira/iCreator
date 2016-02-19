@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical"
+    tools:context="com.example.gululu.icreatorsdksampler.activity.FeedBackActivity">
+
+
+    <include layout="@layout/include_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/main_bg1">
+        <RelativeLayout
+            android:background="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <EditText
+
+                android:background="@null"
+                android:id="@+id/edt_feedback_content"
+                android:layout_width="fill_parent"
+                android:layout_height="180dp"
+                android:maxEms="10"
+                android:minEms="10"
+                android:textColor="@color/fcb_secondary"
+                android:textSize="@dimen/fs_body"
+                android:padding="8dp"
+                android:hint="请输入您的反馈意见（字数200以内）"
+                android:gravity="top"
+                />
+            <TextView
+                android:id="@+id/tv_feedback"
+                android:textSize="14sp"
+                android:text="200"
+                android:textColor="@color/fcb_secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/fs_subhead"
+            android:background="@drawable/login_btn_s"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_height="40dp"
+            android:text="提交反馈"
+            android:textColor="@android:color/white"
+            android:id="@+id/btn_feedback" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

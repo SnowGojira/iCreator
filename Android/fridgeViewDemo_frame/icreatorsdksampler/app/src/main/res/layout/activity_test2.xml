@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg"
+                android:orientation="vertical">
+                <!--android:background="@drawable/nexus6pbg"-->
+
+    <TextView
+        android:id="@+id/tv_qr_code"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        />
+    <!--<FrameLayout
+        android:layout_below="@+id/tv_qr_code"
+        android:layout_marginTop="56dp"
+        android:id="@+id/replace_content"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"/>-->
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/tv_qr_code"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        card_view:cardBackgroundColor="#f0f0ee"
+        card_view:cardCornerRadius="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/replace_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"/>
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/btnLike"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:scaleType="fitXY"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_heart_outline_grey" />
+            </LinearLayout>-->
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+        <!--Account="@string/account"
+        Password="@string/password"
+        UIID="@string/uiid2"/>
+       -UIID="@string/uiid2" -->
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:orientation="horizontal"
+              android:layout_weight="2"
+              android:gravity="center">
+              <ImageButton
+                  android:id="@+id/scan"
+                  android:layout_width="64dp"
+                  android:layout_height="48dp"
+                  android:background="@drawable/scan"/>
+                  />
+              <TextView
+                  android:layout_width="122dp"
+                  android:layout_height="wrap_content"/>
+              <ImageButton
+                  android:id="@+id/history"
+                  android:layout_width="64dp"
+                  android:layout_height="48dp"
+                  android:background="@drawable/history"
+                  />
+          </LinearLayout>
+
+
+</LinearLayout>

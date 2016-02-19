@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:civ_border_width="http://schemas.android.com/tools"
+                android:background="@drawable/login_bg"
+                android:orientation="vertical">
+    <!--这个是实现动画的view-->
+    <com.example.gululu.icreatorsdksampler.customizeview.drag.RevealBackgroundView
+        android:id="@+id/vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--承载listView的容器-->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_bg"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/rvUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_bg"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/changeUserinfo_bg"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:id="@+id/vUserProfileRoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="56dp"
+                    app:layout_collapseMode="parallax">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:clipChildren="false">
+                        <com.example.gululu.icreatorsdksampler.customizeview.RoundedImageViewEx
+                            android:id="@+id/ivUserProfilePhoto"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_gravity="center"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="@color/fcw"
+                            android:src="@drawable/ic_defualt_user"/>
+                            <TextView
+                                android:id="@+id/tvUserName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="昵称"
+                                android:gravity="center"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:textColor="@color/fcw_secondary"
+                                android:textSize="18sp" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    app:elevation="@dimen/default_elevation"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:theme="@style/AppTheme.AppBarOverlay">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <FrameLayout
+                            android:layout_alignParentRight="true"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginRight="8dp">
+                        <ImageButton
+                            android:id="@+id/ivLogo"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/btn_feed_action"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_config"
+                            android:layout_gravity="center"
+                            />
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tlUserProfileTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:tabGravity="fill"
+                    android:background="@android:color/transparent"
+                    app:tabSelectedTextColor="@color/btn_yellow"
+                    app:tabTextColor="@color/fcw_secondary"
+                    app:tabIndicatorColor="@color/btn_yellow"
+                    app:tabIndicatorHeight="4dp"
+                    app:tabMode="fixed"
+                    android:fillViewport="false"/>
+
+            </FrameLayout>
+
+        </android.support.design.widget.AppBarLayout>
+        <com.example.gululu.icreatorsdksampler.customizeview.fab.FloatingActionMenu
+            android:id="@+id/btnCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp">
+            <com.example.gululu.icreatorsdksampler.customizeview.fab.FloatingActionButton
+                android:id="@+id/fab_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MenuButtonsSmall"
+                android:src="@drawable/ic_home"/>
+            <com.example.gululu.icreatorsdksampler.customizeview.fab.FloatingActionButton
+                android:id="@+id/fab_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MenuButtonsSmall"
+                android:src="@drawable/ic_qrcode"/>
+            <com.example.gululu.icreatorsdksampler.customizeview.fab.FloatingActionButton
+                android:id="@+id/fab_design"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MenuButtonsSmall"
+                android:src="@drawable/ic_mine"/>
+
+
+        </com.example.gululu.icreatorsdksampler.customizeview.fab.FloatingActionMenu>
+
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

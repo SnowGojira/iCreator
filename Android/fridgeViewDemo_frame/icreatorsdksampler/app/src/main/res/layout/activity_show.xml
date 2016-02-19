@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/login_bg"
+    tools:context="com.example.gululu.icreatorsdksampler.activity.ShowActivity">
+
+    <include layout="@layout/include_show_title"
+             android:id="@+id/title"/>
+   <LinearLayout
+       android:layout_below="@id/title"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/main_bg1"
+       android:padding="24dp"
+       android:orientation="vertical">
+       <LinearLayout
+           android:id="@+id/ll_QR_title"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:background="@color/fcw">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center">
+
+               <ImageView
+                   android:id="@+id/iv_encode"
+                   android:layout_width="80dp"
+                   android:layout_height="80dp"/>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_marginLeft="16dp"
+                   android:gravity="center_vertical">
+               <TextView
+                   android:id="@+id/tv_history"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center_vertical"
+                   android:text="text"
+                   android:singleLine="true"
+                   android:textSize="@dimen/fs_title"
+                   android:textColor="@color/fcb_text_icon"/>
+               <TextView
+                   android:id="@+id/tv_history_eng"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="center_vertical"
+                   android:text="text"
+                   android:singleLine="true"
+                   android:layout_marginTop="8dp"
+                   android:textSize="@dimen/fs_subhead"
+                   android:textColor="@color/fcb_secondary"/>
+
+               </LinearLayout>
+           </LinearLayout>
+       </LinearLayout>
+
+       <FrameLayout
+           android:id="@+id/frame_glview"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="5"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="56dp"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:id="@+id/ll_collection"
+           android:background="@color/fcw_text_icon">
+           <com.example.gululu.icreatorsdksampler.customizeview.like.LikeButton
+               android:id="@+id/like_button"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:gravity="center"
+               app:icon_size="20dp"
+               app:icon_type="star"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/fs_subhead"
+               android:textColor="@color/fcb_text_icon"
+               android:layout_marginLeft="2dp"
+               android:text="添加到收藏夹"/>
+       </LinearLayout>
+   </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gululu/icreatorsdksampler/customizeview/like/CircleView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gululu/icreatorsdksampler/customizeview/like/DotsView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gululu/icreatorsdksampler/customizeview/like/Icon.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gululu/icreatorsdksampler/customizeview/like/IconType.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gululu/icreatorsdksampler/customizeview/like/LikeButton.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gululu/icreatorsdksampler/customizeview/like/OnLikeListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gululu/icreatorsdksampler/customizeview/like/Utils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/heart_off.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/heart_on.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/star_off.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/star_on.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/thumb_off.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/thumb_on.png" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

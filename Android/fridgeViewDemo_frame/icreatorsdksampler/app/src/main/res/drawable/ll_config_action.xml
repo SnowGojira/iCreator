@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--drawable/btn_feed_action.xml-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:state_pressed="true" android:drawable="@color/fcb_hint"/>
+    <item android:state_focused="true" android:drawable="@color/fcb_hint"/>
+    <item android:drawable="@color/fcw"/>
+</selector>
